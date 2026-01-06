@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAVEL WEBPAGE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: #ffffff;
+            padding: 10px;
+            
+        }
+        nav a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            margin: 0 15px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .alig{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .align{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .card-title{
+            font-weight: bold;
+            text-align: center;
+        }
+        .card-body{
+            text-align: center;
+        }
+        .straight{
+           display: grid;
+           grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+           gap: 25px;
+           margin: 50px 30px;
+        }
+        .card:hover{
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          transform: translateY(-5px);
+          transition: all 0.3s ease;
+        }
+        .dest {   
+          margin: 40px 30px;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 30px;
+        }
+        .card-img-top,.carousel-inner img{
+            height: 180px;
+            object-fit: cover;
+       }
+        .img{
+
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            margin-top: 10px;    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .img::before{
+          content: "";
+          background-image: url('front1.jpg');
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 110%;
+          z-index: -1;
+          opacity: 0.8;
+          background-size: cover;
+          background-position: center;
+        }
+        .destination h3{
+            text-align: center;
+            margin-top: 30px;
+        }
+        .next h2{
+          text-align: center;
+          margin-top: 15px;
+        }
+        .img button{
+          width: 300px;
+          font-size: 25px;
+          color: rgb(255, 255, 255);
+          font-weight: bold;
+          border: black 2px dotted; 
+        }
+        .accordion-item{
+            margin: 20px 200px;
+            border: #cecece 2px solid;
+            font-size: 20px;
+        }
+        .accordion-header button{
+            font-weight: bold;
+            font-size: 25px;
+        }
+        .arrage{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            padding-bottom: 20px;
+            color: white; 
+        }
+        footer a{
+            color: white;
+            text-decoration: none;
+        }
+        footer p{
+            color: white;
+            text-align: center;
+        }
+        h4{
+          padding-top: 20px ;
+        }
+        @media (max-width: 576px) {
+        .img button{
+             width: 200px;
+             font-size: 18px;
+          }
+
+        .accordion-header button{
+             font-size: 18px;
+          }
+      }
+        </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <img src="p.png" style="width: 100px;">
+    <a class="navbar-brand" href="#">GoVista</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Premium Account</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Destinations
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">AFRICA</a></li>
+            <li><a class="dropdown-item" href="#">AMERICA</a></li>
+            <li><a class="dropdown-item" href="#">SRI LANKA</a></li>
+          </ul>
+        </li>
+        
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+    
+
+<div class="img">
+  <p class="d-inline-flex gap-1">
+  <button type="button" class="btn" data-bs-toggle="button" >EXPLORE PACKAGES</button>
+  <button type="button" class="btn" data-bs-toggle="button" aria-pressed="true">DESTINATIONS</button>
+</p>
+</div>
+
+<div class="next">
+    <h2>PACKAGES FOR YOU</h2>
+<div class="straight">
+    <div class="card" style="width: 18rem;;">
+  <img src="https://tse1.mm.bing.net/th/id/OIP.nwf1QNbWqk8LqO7nZdSg8gHaE8?pid=Api&P=0&h=180" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Family Trip</h5>
+    <p class="card-text">Enjoy a memorable family vacation with our specially curated packages.</p>
+    <button type="button" class="btn btn-outline-primary">Explore</button>
+  </div>
+</div>
+<div class="card" style="width: 18rem;;">
+  <img src="https://tse3.mm.bing.net/th/id/OIP.KT-7VZqTdIPdoO_CgC13VgHaE8?pid=Api&P=0&h=180" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Friends Zone</h5>
+    <p class="card-text">Create unforgettable memories with your friends through our exciting travel packages.</p>
+    <button type="button" class="btn btn-outline-primary">Explore</button>
+</div>
+</div>
+<div class="card" style="width: 18rem;;">
+  <img src="https://blog.akbartravels.com/wp-content/uploads/2022/10/shutterstock_1881529978-min.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Honeymoon</h5>
+    <p class="card-text">Celebrate your love with a romantic getaway tailored just for you and your partner.</p>
+    <button type="button" class="btn btn-outline-primary">Explore</button>
+  </div>
+</div>
+<div class="card" style="width: 18rem;;">
+  <img src="https://tse1.mm.bing.net/th/id/OIP.GldWXhqPKyveuJlyMxCugQHaEK?pid=Api&P=0&h=180" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Customized Destinations</h5>
+    <p class="card-text">You can fix the destination according to your preferences as a wrap.</p>
+    <button type="button" class="btn btn-outline-primary">Explore</button>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="destination">
+    <h3>DESTINATIONS</h3>
+    <div class="dest">
+    <div class="card" style="width: 18rem;;">
+    <div id="carouselafrica" class="carousel slide carousel-fade">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://tse2.mm.bing.net/th/id/OIP.HFCvlxAbz3KgNBdB0kk7aQHaD8?pid=Api&P=0&h=180" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://tse4.mm.bing.net/th/id/OIP.F0fZNNM9Z9spa7Ie6phupQHaEK?pid=Api&P=0&h=180" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://tse1.mm.bing.net/th/id/OIP.kvMXtRyQPJu0nSnuRq4PcgHaEL?pid=Api&P=0&h=180" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselafrica" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselafrica" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+  <div class="card-body">
+    <h5 class="card-title">AFRICA</h5>
+    <p class="card-text">If you are looking for a great safari getaway, Botswana is the perfect destination to visit.</p>
+    <button type="button" class="btn btn-outline-primary">Explore</button>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;;">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="a2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="a3.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="a1.webp" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+  <div class="card-body">
+    <h5 class="card-title">AMERICA</h5>
+    <p class="card-text">The United States is one of the most iconic travel destinations in the world—and for good reason.</p>
+    <button type="button" class="btn btn-outline-primary">Explore</button>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;;">
+    <div id="carouselsri" class="carousel slide carousel-fade">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="s1.jpeg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="s2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="s3.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselsri" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselsri" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+  <div class="card-body">
+    <h5 class="card-title">SRI LANKA</h5>
+    <p class="card-text">Sri Lanka is a popular tourist destination, renowned for its diverse attractions, including wildlife reserves, beaches, ancient sites, and cultural cities and villages.</p>
+    <button type="button" class="btn btn-outline-primary">Explore</button>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        What is GoVista?
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">GoVista is a travel website that provides information and resources for travelers around the world.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+       Why GoVista?
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">GoVista always focus on customers comfort and interests. We provide a wide range of travel options and services to meet the needs of our customers,budget friendly as well.We have an experience of more than 10 years in the travel industry.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        How to contact GoVista?
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">You can contact GoVista through our website's contact form, email, or phone number listed on our contact page.</div>
+    </div>
+  </div>
+</div>
+
+<footer style="background-color: black;"> 
+  <div class="arrage">
+  <div>
+  <h4>About Us</h4>
+  <ul type="none">
+    <li>Investor Relations</a></li>
+    <li><a href="https://www.govista.com/management">Management</a></li>
+    <li><a href="https://www.govista.com/terms-of-service">Terms of Services</a></li>
+    <li><a href="https://www.govista.com/user-agreement">User Agreement</a></li>
+    <li><a href="https://www.govista.com/privacy-policy">Privacy</a></li>
+    <li><a href="https://www.govista.com/careers">Careers</a></li>
+    <li><a href="https://www.govista.com/technology">Technology@GoVista</a></li>
+    <li><a href="https://www.govista.com/customer-support">Customer Support</a></li>
+    <li><a href="https://www.govista.com/security"></a>Report Security Issues</a></li>   
+  </ul>
+  </div>
+  <div>
+  <h4>Contact Us</h4>
+  <ul type="none">
+  <li >Contact Form</a></li>
+  <li>Email Us</a></li>
+  <li>Call Us</a></li>
+  <li>Instagram</a></li>
+  </ul>
+  </div>
+  </div>
+  <div>
+  <p style>&copy; 2024 GoVista. All rights reserved.</p>
+  </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
